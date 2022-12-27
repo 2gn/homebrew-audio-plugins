@@ -1,13 +1,14 @@
 cask "uhe-protoverb" do
-  version "1.0,4102"
-  sha256 "13db2f87ec9084a5f2b03ea3a6280dfd685993892d5cd404ceccce975a1dd920"
+  version "1.0.1,12092"
+  sha256 "ef229da0935eba9f525c60acbb579d0d395e2135624257cb89c39111c82a0f8d"
 
-  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/Protoverb_#{version.before_comma.dots_to_underscores}_Mac.zip",
-      verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"
+  url "https://uhe-dl.b-cdn.net/releases/Protoverb_101_12092_Mac.zip"
   name "Protoverb"
   homepage "https://u-he.com/products/protoverb/"
 
-  pkg "Protoverb#{version.after_comma}Mac/Protoverb #{version.before_comma}.#{version.after_comma} Installer.pkg"
+  pkg "Protoverb_#{version.after_comma}_Mac/Protoverb #{version.before_comma} Installer.pkg"
+  
+  desc "A natural sounding reverb based on the concept of a room simulator."
 
   uninstall pkgutil: [
     "com.u-he.Protoverb.aax.pkg",
